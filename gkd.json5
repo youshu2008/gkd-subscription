@@ -1,0 +1,46 @@
+// ============================================================
+// 自用 GKD 订阅规则（单文件版）
+// GKD 直接订阅本文件的 raw 链接即可，无需构建、无需 Node 环境
+// 怎么加规则、改规则、更新，见同目录《维护教程.md》
+// ============================================================
+{
+  // 订阅标识：全库唯一的大随机数字，创建后不要再改，改了 GKD 会当成另一个订阅
+  id: 72491583,
+  name: '自用GKD规则',
+  version: 0, // 每修改一次规则就 +1，GKD 才会检测到更新并提示
+  author: 'myself',
+
+  // 本文件的 raw 订阅链接（两者填同一个）
+  updateUrl: 'https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5',
+  checkUpdateUrl: 'https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5',
+  supportUri: 'https://gkd.li/',
+
+  // 规则类别（可选，先留空；需要分类时按《维护教程》添加）
+  categories: [],
+
+  // 全局规则组（跨所有 App 通用的规则，先留空；一般用不到）
+  globalGroups: [],
+
+  // 各 App 的规则都写在这里，一个 App 一段；新增时复制下方整块模板改即可
+  apps: [
+
+    // ↓↓↓↓↓ 新增 App 规则时，复制下面这一整块，改掉注释里的内容 ↓↓↓↓↓
+    // {
+    //   id: 'com.example.app',        // App 包名（手机 设置→应用管理→应用信息 里可查）
+    //   name: '示例App',              // 给这条规则起的显示名
+    //   groups: [
+    //     {
+    //       key: 0,                   // 同一个 App 内，规则组编号从 0 开始依次递增，不能重复
+    //       name: '开屏广告',          // 规则组名称，会显示在 GKD 列表里
+    //       rules: {
+    //         // 选择器：在 GKD 的「快照审查」里抓快照测出来，复制粘贴到这里
+    //         matches: 'TextView[id="com.example.app:id/btn_skip"]',
+    //       },
+    //       snapshotUrls: [],         // 参考截图链接，只给编辑器对照用，自用可留空
+    //     },
+    //   ],
+    // },
+    // ↑↑↑↑↑ 复制模板到这里结束 ↑↑↑↑↑
+
+  ],
+}
