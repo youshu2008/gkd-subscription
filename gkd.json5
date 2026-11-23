@@ -7,8 +7,8 @@
 {
   id: 72491583,
   name: "自用GKD规则",
-  version: 3,
-  author: "myself",
+  version: 4,
+  author: "洪逾先生",
   updateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
   checkUpdateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
   supportUri: "https://gkd.li/",
@@ -3295,10 +3295,18 @@
               ],
             },
             {
+              // 兼容新版微信：广告标识容器不是可点击LinearLayout时，直接按文字点[广告]
+              key: 3,
+              name: "①单击[广告]文字(兼容新版)",
+              fastQuery: true,
+              matches: "[text=\"广告\" || text=\"廣告\"][visibleToUser=true]",
+            },
+            {
               preKeys: [
                 0,
                 1,
                 2,
+                3,
               ],
               key: 25,
               name: "②点击[关闭]",
