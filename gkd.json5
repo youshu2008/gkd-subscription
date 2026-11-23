@@ -1,7 +1,7 @@
 {
   id: 72491583,
-  name: "洪逾先生@GKD自用规则",
-  version: 6,
+  name: "洪逾先生的GKD自用规则",
+  version: 7,
   author: "洪逾先生",
   updateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
   checkUpdateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
@@ -9,6 +9,26 @@
   categories: [],
   globalGroups: [],
   apps: [
+    {
+      id: "com.ccb.leye",
+      name: "建行惠懂你",
+      groups: [
+        {
+          key: 0,
+          name: "首页商户客群礼弹窗广告-点击关闭",
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: "app",
+          rules: [
+            {
+              activityIds: "com.ccb.leye.phhome.MainActivity",
+              matches: "[vid=\"dialog_homeactivity_cancel\"][visibleToUser=true]",
+            },
+          ],
+        },
+      ],
+    },
     {
       id: "com.ss.android.ugc.aweme",
       name: "抖音",
@@ -4920,6 +4940,21 @@
             },
           ],
           key: 6,
+        },
+        {
+          key: 10,
+          name: "其他-设置后台保护提示-点击[忽略]",
+          desc: "首页[设置后台保护]卡片 -> 点击[忽略]",
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: "app",
+          rules: [
+            {
+              activityIds: ".MainActivity",
+              matches: "[text=\"忽略\"][visibleToUser=true]",
+            },
+          ],
         },
         {
           key: 1,
@@ -17269,6 +17304,7 @@
               anyMatches: [
                 "[text^=\"关闭\" || text*=\"Close\" || text=\"關閉此廣告\"][clickable=true][visibleToUser=true]",
                 "@LinearLayout[clickable=true] > [text=\"关闭该广告\" || text*=\"Close\"][visibleToUser=true]",
+                "[text=\"关闭该广告\"][visibleToUser=true]",
                 "@LinearLayout[index=1][clickable=true] <2 * < * - [text*=\"广告\"]",
                 "@[text=\"关闭该广告\"] -2 [text^=\"对这条广告不感兴趣\"][visibleToUser=true]",
               ],
@@ -17943,6 +17979,7 @@
           desc: "注意⚠️：该规则有概率误触，请谨慎开启",
           activityIds: [
             ".plugin.brandservice.ui.timeline.preload.ui.TmplWebView",
+            ".plugin.brandservice.ui.timeline.preload.ui.TmplWebViewMMUI",
             ".plugin.webview.ui.tools.fts.MMSosWebViewUI",
             ".plugin.webview.ui.tools.MMWebViewUI",
           ],
