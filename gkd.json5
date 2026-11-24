@@ -1,12 +1,57 @@
 {
   id: 72491583,
   name: "洪逾先生的GKD自用规则",
-  version: 7,
+  version: 8,
   author: "洪逾先生",
   updateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
   checkUpdateUrl: "https://raw.githubusercontent.com/youshu2008/gkd-subscription/main/gkd.json5",
   supportUri: "https://gkd.li/",
-  categories: [],
+  categories: [
+    {
+      key: 0,
+      name: "开屏广告",
+    },
+    {
+      key: 1,
+      name: "青少年模式",
+    },
+    {
+      key: 2,
+      name: "更新提示",
+    },
+    {
+      key: 3,
+      name: "评价提示",
+    },
+    {
+      key: 4,
+      name: "通知提示",
+    },
+    {
+      key: 5,
+      name: "权限提示",
+    },
+    {
+      key: 6,
+      name: "局部广告",
+    },
+    {
+      key: 7,
+      name: "全屏广告",
+    },
+    {
+      key: 8,
+      name: "分段广告",
+    },
+    {
+      key: 9,
+      name: "功能类",
+    },
+    {
+      key: 10,
+      name: "其他",
+    },
+  ],
   globalGroups: [],
   apps: [
     {
@@ -15,7 +60,7 @@
       groups: [
         {
           key: 0,
-          name: "首页商户客群礼弹窗广告-点击关闭",
+          name: "全屏广告-首页商户客群礼弹窗广告-点击关闭",
           fastQuery: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -906,7 +951,7 @@
         },
         {
           key: 0,
-          name: "关闭青少年弹窗",
+          name: "青少年模式-关闭青少年弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: "app",
@@ -1057,7 +1102,7 @@
         },
         {
           key: 1,
-          name: "关闭用户推荐",
+          name: "局部广告-关闭用户推荐",
           rules: [
             {
               activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
@@ -1097,7 +1142,7 @@
           activityIds: [
             "com.ss.android.ugc.aweme.main.MainActivity",
           ],
-          name: "关闭朋友推荐弹窗",
+          name: "局部广告-关闭朋友推荐弹窗",
           rules: [
             {
               matches: "[",
@@ -1279,7 +1324,7 @@
         },
         {
           key: 3,
-          name: "关闭更新弹窗",
+          name: "更新提示-关闭更新弹窗",
           quickFind: true,
           actionMaximum: 1,
           resetMatch: "app",
@@ -1387,7 +1432,7 @@
         },
         {
           key: 4,
-          name: "首页左上角广告",
+          name: "局部广告-首页左上角广告",
           activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
           rules: [
             {
@@ -1753,7 +1798,7 @@
         },
         {
           key: 5,
-          name: "广告弹窗",
+          name: "全屏广告-广告弹窗",
           quickFind: true,
           rules: [
             {
@@ -2152,7 +2197,7 @@
           quickFind: true,
           actionMaximum: 1,
           resetMatch: "app",
-          name: "去商店评分",
+          name: "评价提示-去商店评分",
           desc: "点击[取消]",
           activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
           rules: [
@@ -2252,7 +2297,7 @@
           key: 7,
           enable: false,
           quickFind: true,
-          name: "设置无声进入抖音",
+          name: "功能类-设置无声进入抖音",
           desc: "点击[拒绝]",
           activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
           rules: [
@@ -2343,7 +2388,7 @@
         {
           enable: false,
           key: 10,
-          name: "请求开启通知提示信息",
+          name: "通知提示-请求开启通知提示信息",
           desc: "自动点击“暂不”",
           actionMaximum: 1,
           resetMatch: "app",
@@ -2365,7 +2410,7 @@
         {
           enable: false,
           key: 11,
-          name: "自动勾选原图",
+          name: "功能类-自动勾选原图",
           desc: "聊天发送图片时自动勾选原图",
           quickFind: true,
           activityIds: "com.ss.android.ugc.aweme.im.sdk.media.choose.MediaChooseActivity",
@@ -2469,7 +2514,7 @@
         {
           enable: false,
           key: 12,
-          name: "休息提醒",
+          name: "功能类-休息提醒",
           quickFind: true,
           rules: [
             {
@@ -2487,7 +2532,7 @@
         },
         {
           key: 13,
-          name: "添加快捷方式到桌面",
+          name: "功能类-添加快捷方式到桌面",
           actionMaximum: 1,
           resetMatch: "app",
           rules: [
@@ -2509,7 +2554,7 @@
         },
         {
           key: 14,
-          name: "视频播放中途插入的打招呼界面",
+          name: "全屏广告-视频播放中途插入的打招呼界面",
           activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
           rules: [
             {
@@ -2683,7 +2728,7 @@
         },
         {
           key: 15,
-          name: "关闭商城推荐",
+          name: "局部广告-关闭商城推荐",
           desc: "点击【不感兴趣】",
           rules: [
             {
@@ -4187,7 +4232,7 @@
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: "app",
-          name: "全屏广告-去商店评分",
+          name: "评价提示-去商店评分",
           desc: "点击[取消]",
           activityIds: "com.ss.android.ugc.aweme.main.MainActivity",
           rules: [
@@ -4720,7 +4765,7 @@
         },
         {
           key: 1,
-          name: "更新弹窗",
+          name: "更新提示-更新弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: "app",
@@ -4958,7 +5003,7 @@
         },
         {
           key: 1,
-          name: "“我的”页会员广告",
+          name: "局部广告-“我的”页会员广告",
           activityIds: [
             "com.huawei.health.MainActivity",
           ],
@@ -4974,7 +5019,7 @@
         },
         {
           key: 2,
-          name: "弹窗广告",
+          name: "全屏广告-弹窗广告",
           rules: [
             {
               key: 0,
@@ -4987,7 +5032,7 @@
         },
         {
           key: 3,
-          name: "请求开启个性化推荐弹窗",
+          name: "局部广告-请求开启个性化推荐弹窗",
           activityIds: "com.huawei.watchface.api.WebViewActivity",
           rules: [
             {
@@ -5117,7 +5162,7 @@
         {
           enable: false,
           key: 4,
-          name: "底部横幅广告",
+          name: "局部广告-底部横幅广告",
           rules: [
             {
               activityIds: "com.huawei.health.MainActivity",
@@ -5443,7 +5488,7 @@
         },
         {
           key: 1,
-          name: "更新弹窗",
+          name: "更新提示-更新弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: "app",
@@ -5461,7 +5506,7 @@
         },
         {
           key: 2,
-          name: "支付完成界面广告卡片",
+          name: "局部广告-支付完成界面广告卡片",
           quickFind: true,
           activityIds: "com.unionpay.activity.react.UPActivityReactNative",
           rules: [
@@ -5481,7 +5526,7 @@
         },
         {
           key: 9,
-          name: "右侧悬浮广告",
+          name: "局部广告-右侧悬浮广告",
           actionMaximum: 1,
           resetMatch: "app",
           quickFind: true,
@@ -5498,7 +5543,7 @@
         },
         {
           key: 10,
-          name: "定位权限悬浮弹窗",
+          name: "权限提示-定位权限悬浮弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: "app",
@@ -5632,7 +5677,7 @@
         {
           enable: false,
           key: 11,
-          name: "访问位置请求弹窗",
+          name: "权限提示-访问位置请求弹窗",
           desc: "自动点击【不允许】。默认关闭，请手动开启",
           quickFind: true,
           activityIds: [
@@ -5648,7 +5693,7 @@
         {
           enable: false,
           key: 12,
-          name: "开启消息通知弹窗",
+          name: "通知提示-开启消息通知弹窗",
           desc: "默认关闭，请手动开启",
           quickFind: true,
           activityIds: [
@@ -5663,7 +5708,7 @@
         },
         {
           key: 13,
-          name: "天天签到-获得新勋章提示",
+          name: "全屏广告-天天签到-获得新勋章提示",
           desc: "点击左上角返回",
           actionMaximum: 1,
           resetMatch: "app",
@@ -5678,7 +5723,7 @@
         },
         {
           key: 14,
-          name: "我的页面-广告弹窗",
+          name: "局部广告-我的页面-广告弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           activityIds: "com.unionpay.activity.UPActivityMain",
@@ -6042,7 +6087,7 @@
         },
         {
           key: 8,
-          name: "全屏广告-定位权限悬浮弹窗",
+          name: "权限提示-定位权限悬浮弹窗",
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: "app",
@@ -6424,7 +6469,7 @@
         {
           enable: false,
           key: 11,
-          name: "全屏广告-访问位置请求弹窗",
+          name: "权限提示-访问位置请求弹窗",
           desc: "自动点击【不允许】。默认关闭，请手动开启",
           fastQuery: true,
           activityIds: [
@@ -6440,7 +6485,7 @@
         {
           enable: false,
           key: 12,
-          name: "全屏广告-开启消息通知弹窗",
+          name: "通知提示-开启消息通知弹窗",
           desc: "默认关闭，请手动开启",
           fastQuery: true,
           activityIds: [
@@ -6977,7 +7022,7 @@
         {
           enable: false,
           key: 1,
-          name: "限时福利弹窗",
+          name: "全屏广告-限时福利弹窗",
           rules: [
             {
               key: 0,
@@ -7014,7 +7059,7 @@
         },
         {
           key: 2,
-          name: "消息页面-热门活动卡片",
+          name: "局部广告-消息页面-热门活动卡片",
           activityIds: "com.taobao.tao.welcome.Welcome",
           rules: [
             {
@@ -7194,7 +7239,7 @@
         },
         {
           key: 3,
-          name: "悬浮广告",
+          name: "局部广告-悬浮广告",
           rules: [
             {
               key: 0,
@@ -7209,7 +7254,7 @@
         {
           enable: false,
           key: 8,
-          name: "开启系统通知提示",
+          name: "通知提示-开启系统通知提示",
           desc: "自动点击关闭",
           actionMaximum: 1,
           activityIds: [
@@ -7351,7 +7396,7 @@
         {
           enable: false,
           key: 9,
-          name: "各级页面-添加到首页弹窗",
+          name: "全屏广告-各级页面-添加到首页弹窗",
           desc: "自动点击退出",
           quickFind: true,
           activityIds: [
@@ -7493,7 +7538,7 @@
         },
         {
           key: 10,
-          name: "视频页面-活动弹窗",
+          name: "全屏广告-视频页面-活动弹窗",
           activityIds: "com.taobao.tao.welcome.Welcome",
           rules: [
             {
@@ -7698,7 +7743,7 @@
         {
           enable: false,
           key: 11,
-          name: "视频页面-签到弹窗",
+          name: "全屏广告-视频页面-签到弹窗",
           activityIds: "com.taobao.tao.welcome.Welcome",
           rules: [
             {
@@ -7883,7 +7928,7 @@
         },
         {
           key: 12,
-          name: "版本更新",
+          name: "更新提示-版本更新",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -8065,7 +8110,7 @@
         {
           enable: false,
           key: 13,
-          name: "小额免密支付弹窗",
+          name: "其他-小额免密支付弹窗",
           desc: "点击关闭",
           quickFind: true,
           activityIds: "com.alipay.android.msp.ui.views.MspContainerActivity",
@@ -8223,7 +8268,7 @@
         {
           enable: false,
           key: 14,
-          name: "将小组件添加到手机桌面",
+          name: "功能类-将小组件添加到手机桌面",
           desc: "点击取消",
           activityIds: "com.alibaba.triver.container.TriverMainActivity",
           rules: [
@@ -8237,7 +8282,7 @@
         {
           enable: false,
           key: 15,
-          name: "开启悬浮窗权限",
+          name: "权限提示-开启悬浮窗权限",
           desc: "点击“否”",
           activityIds: "com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity",
           quickFind: true,
@@ -9374,7 +9419,7 @@
         {
           enable: false,
           key: 8,
-          name: "全屏广告-开启系统通知提示",
+          name: "通知提示-开启系统通知提示",
           desc: "自动点击关闭",
           actionMaximum: 1,
           activityIds: [
@@ -10017,7 +10062,7 @@
         {
           enable: false,
           key: 15,
-          name: "全屏广告-开启悬浮窗权限",
+          name: "权限提示-开启悬浮窗权限",
           desc: "点击“否”",
           activityIds: "com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity",
           fastQuery: true,
@@ -11245,7 +11290,7 @@
         },
         {
           key: 1,
-          name: "首页广告弹窗",
+          name: "全屏广告-首页广告弹窗",
           activityIds: "com.xiaomi.mico.main.MainActivity",
           rules: [
             {
@@ -11958,7 +12003,7 @@
         },
         {
           key: 1,
-          name: "广告卡片",
+          name: "局部广告-广告卡片",
           activityIds: "com.tencent.qqmusic.activity.AppStarterActivity",
           rules: [
             {
@@ -11982,7 +12027,7 @@
         },
         {
           key: 2,
-          name: "首页-底部广告弹窗",
+          name: "局部广告-首页-底部广告弹窗",
           quickFind: true,
           activityIds: "com.tencent.qqmusic.activity.TranslucentWebViewActivity",
           rules: [
@@ -12094,7 +12139,7 @@
         },
         {
           key: 3,
-          name: "内测体验弹窗",
+          name: "全屏广告-内测体验弹窗",
           desc: "点击[不再提醒]",
           activityIds: "com.tencent.qqmusic.activity.AppStarterActivity",
           quickFind: true,
@@ -12195,7 +12240,7 @@
         },
         {
           key: 4,
-          name: "免流弹窗",
+          name: "全屏广告-免流弹窗",
           desc: "点击[流量够用]",
           activityIds: "com.tencent.qqmusic.activity.AppStarterActivity",
           quickFind: true,
@@ -13384,7 +13429,7 @@
         {
           enable: false,
           key: 1,
-          name: "消息页面-顶部广告",
+          name: "局部广告-消息页面-顶部广告",
           desc: "规则误触,待修复,需要快照准确定位",
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -13472,7 +13517,7 @@
         },
         {
           key: 3,
-          name: "频道页面广告",
+          name: "局部广告-频道页面广告",
           rules: [
             {
               name: "弹窗广告",
@@ -13499,7 +13544,7 @@
         {
           enable: false,
           key: 4,
-          name: "顶部SVIP广告",
+          name: "局部广告-顶部SVIP广告",
           desc: "消息界面-搜索框和消息记录之间的广告卡片,点击关闭右侧x",
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -13947,7 +13992,7 @@
         {
           enable: false,
           key: 5,
-          name: "好友热播",
+          name: "局部广告-好友热播",
           desc: "好友动态中的好友热播，自动选择“减少好友热播” - 默认关闭",
           activityIds: [
             "com.qzone.reborn.feedx.activity.QZoneFriendFeedXActivity",
@@ -13974,7 +14019,7 @@
         },
         {
           key: 7,
-          name: "扫一扫-登录确认",
+          name: "功能类-扫一扫-登录确认",
           desc: "自动点击登录。包括 PC 登录确认、QQ 互联登录确认。",
           quickFind: true,
           rules: [
@@ -14009,7 +14054,7 @@
         {
           enable: false,
           key: 8,
-          name: "消息页面顶部-无法接收新消息通知",
+          name: "通知提示-消息页面顶部-无法接收新消息通知",
           desc: "消息界面-搜索框和消息记录之间的通知卡片,点击关闭右侧x",
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -14153,7 +14198,7 @@
         },
         {
           key: 9,
-          name: "我的等级-浮窗广告",
+          name: "局部广告-我的等级-浮窗广告",
           activityIds: "com.tencent.mobileqq.activity.QQBrowserActivity",
           rules: [
             {
@@ -14358,7 +14403,7 @@
         {
           enable: false,
           key: 10,
-          name: "自动勾选原图",
+          name: "功能类-自动勾选原图",
           desc: "发送图片时自动勾选原图",
           activityIds: [
             "com.tencent.mobileqq.activity.SplashActivity",
@@ -14491,7 +14536,7 @@
         {
           enable: false,
           key: 11,
-          name: "自动查看原图",
+          name: "功能类-自动查看原图",
           desc: "查看图片时自动点击原图",
           activityIds: "com.tencent.richframework.gallery.QQGalleryActivity",
           rules: [
@@ -14588,7 +14633,7 @@
         {
           enable: false,
           key: 12,
-          name: "QQ小世界评论区广告",
+          name: "局部广告-QQ小世界评论区广告",
           desc: "点击广告-弹出原因框-关闭此条广告",
           activityIds: [
             "com.tencent.mobileqq.activity.SplashActivity",
@@ -14609,7 +14654,7 @@
         },
         {
           key: 13,
-          name: "QQ小程序开屏广告",
+          name: "开屏广告-QQ小程序开屏广告",
           desc: "点击右下角跳过",
           activityIds: [
             "com.tencent.mobileqq.mini.appbrand.ui.AppBrandUI",
@@ -14628,7 +14673,7 @@
         },
         {
           key: 14,
-          name: "黄钻-弹窗广告",
+          name: "全屏广告-黄钻-弹窗广告",
           activityIds: "com.tencent.mobileqq.activity.QQBrowserActivity",
           rules: [
             {
@@ -14959,7 +15004,7 @@
         {
           enable: false,
           key: 15,
-          name: "好友动态-为你推荐",
+          name: "局部广告-好友动态-为你推荐",
           quickFind: true,
           activityIds: [
             "com.tencent.mobileqq.activity.SplashActivity",
@@ -14987,7 +15032,7 @@
         },
         {
           key: 17,
-          name: "更新弹窗",
+          name: "更新提示-更新弹窗",
           actionMaximum: 1,
           resetMatch: "app",
           rules: [
@@ -15161,7 +15206,7 @@
         {
           enable: false,
           key: 19,
-          name: "内测邀请弹窗",
+          name: "全屏广告-内测邀请弹窗",
           quickFind: true,
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -15175,7 +15220,7 @@
         {
           enable: false,
           key: 20,
-          name: "钱包-卡片广告",
+          name: "局部广告-钱包-卡片广告",
           quickFind: true,
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -15198,7 +15243,7 @@
         },
         {
           key: 21,
-          name: "首页广告弹窗",
+          name: "全屏广告-首页广告弹窗",
           rules: [
             {
               key: 0,
@@ -15638,7 +15683,7 @@
         },
         {
           key: 13,
-          name: "全屏广告-QQ小程序开屏广告",
+          name: "开屏广告-QQ小程序开屏广告",
           desc: "点击跳过QQ小程序的开屏广告",
           enable: false,
           fastQuery: true,
@@ -16995,7 +17040,7 @@
         {
           enable: false,
           key: 8,
-          name: "局部广告-消息页面顶部-无法接收新消息通知",
+          name: "通知提示-消息页面顶部-无法接收新消息通知",
           desc: "消息界面-搜索框和消息记录之间的通知卡片,点击关闭右侧x",
           activityIds: "com.tencent.mobileqq.activity.SplashActivity",
           rules: [
@@ -19535,7 +19580,7 @@
         {
           enable: false,
           key: 1,
-          name: "消息列表上方广告",
+          name: "局部广告-消息列表上方广告",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -19551,7 +19596,7 @@
         {
           enable: false,
           key: 2,
-          name: "文件即将过期提示",
+          name: "其他-文件即将过期提示",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -19566,7 +19611,7 @@
           ],
         },
         {
-          name: "自动点击原图",
+          name: "功能类-自动点击原图",
           enable: false,
           key: 3,
           actionMaximum: 1,
@@ -19586,7 +19631,7 @@
         {
           enable: false,
           key: 4,
-          name: "版本更新弹窗",
+          name: "更新提示-版本更新弹窗",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -19606,7 +19651,7 @@
         {
           enable: false,
           key: 5,
-          name: "扫码自动登录桌面版",
+          name: "功能类-扫码自动登录桌面版",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -19716,7 +19761,7 @@
         },
         {
           key: 1,
-          name: "我的页面-广告弹窗",
+          name: "全屏广告-我的页面-广告弹窗",
           activityIds: "com.ccb.start.view.startdialog.StartDialogActivity",
           rules: [
             {
@@ -20539,7 +20584,7 @@
         },
         {
           key: 0,
-          name: "第一次启动提示",
+          name: "其他-第一次启动提示",
           activityIds: "com.icbc.activity.init.SplashActivity",
           rules: [
             {
@@ -20631,7 +20676,7 @@
         },
         {
           key: 1,
-          name: "弹窗广告",
+          name: "全屏广告-弹窗广告",
           enable: false,
           activityIds: "com.icbc.activity.main.MainActivity",
           rules: [
@@ -21728,7 +21773,7 @@
         {
           enable: false,
           key: 1,
-          name: "定位提示-请求定位权限弹窗",
+          name: "权限提示-定位提示-请求定位权限弹窗",
           quickFind: true,
           activityIds: "com.eg.android.AlipayGphone.AlipayLogin",
           rules: [
@@ -22254,7 +22299,7 @@
         {
           enable: false,
           key: 4,
-          name: "设置支付宝小组件",
+          name: "功能类-设置支付宝小组件",
           desc: "点击关闭",
           quickFind: true,
           activityIds: "com.alipay.android.msp.ui.views.MspContainerActivity",
@@ -22268,7 +22313,7 @@
         },
         {
           key: 10,
-          name: "小程序-12306",
+          name: "全屏广告-小程序-12306",
           activityIds: "com.alipay.mobile.nebulax.xriver.activity.XRiverActivity",
           rules: [
             {
@@ -22520,7 +22565,7 @@
         {
           enable: false,
           key: 1,
-          name: "全屏广告-定位提示-请求定位权限弹窗",
+          name: "权限提示-定位提示-请求定位权限弹窗",
           fastQuery: true,
           activityIds: "com.eg.android.AlipayGphone.AlipayLogin",
           rules: [
@@ -23595,7 +23640,7 @@
         },
         {
           key: 1,
-          name: "更新弹窗",
+          name: "更新提示-更新弹窗",
           actionMaximum: 1,
           resetMatch: "app",
           quickFind: true,
@@ -23618,7 +23663,7 @@
         {
           enable: false,
           key: 4,
-          name: "截屏分享",
+          name: "功能类-截屏分享",
           desc: "关闭截屏时app弹出的分享弹窗",
           activityIds: "com.autonavi.map.activity.NewMapActivity",
           rules: [
@@ -23864,7 +23909,7 @@
         },
         {
           key: 10,
-          name: "首页-地图页面上方消息提醒",
+          name: "其他-首页-地图页面上方消息提醒",
           activityIds: "com.autonavi.map.activity.NewMapActivity",
           rules: [
             {
@@ -24105,7 +24150,7 @@
         {
           enable: false,
           key: 11,
-          name: "首页-签到卡片",
+          name: "全屏广告-首页-签到卡片",
           desc: "点击【x】",
           actionMaximum: 1,
           resetMatch: "app",
@@ -24488,7 +24533,7 @@
         {
           enable: false,
           key: 12,
-          name: "加油页面-优惠券弹窗",
+          name: "全屏广告-加油页面-优惠券弹窗",
           activityIds: "com.autonavi.map.activity.NewMapActivity",
           rules: [
             {
@@ -26021,7 +26066,7 @@
         },
         {
           key: 0,
-          name: "卡片广告",
+          name: "局部广告-卡片广告",
           desc: "点击卡片右上角按钮->免广告-点击不感兴趣->选择关闭原因-点击不感兴趣",
           quickFind: true,
           activityIds: [
@@ -26081,7 +26126,7 @@
         {
           key: 1,
           quickFind: true,
-          name: "关闭升级弹窗",
+          name: "更新提示-关闭升级弹窗",
           activityIds: "com.coolapk.market.view.main.MainActivity",
           snapshotUrls: "https://i.gkd.li/import/12503762",
           rules: [
@@ -26172,7 +26217,7 @@
         {
           key: 3,
           quickFind: true,
-          name: "关闭推送通知",
+          name: "通知提示-关闭推送通知",
           activityIds: "com.coolapk.market.view.main.MainActivity",
           rules: [
             {
@@ -27456,7 +27501,7 @@
         },
         {
           key: 1,
-          name: "首页弹窗",
+          name: "全屏广告-首页弹窗",
           activityIds: [
             "com.cn21.ecloud.activity.MainPageActivity",
           ],
@@ -27791,7 +27836,7 @@
         },
         {
           key: 2,
-          name: "版本更新",
+          name: "更新提示-版本更新",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -28725,7 +28770,7 @@
         },
         {
           key: 1,
-          name: "版本更新",
+          name: "更新提示-版本更新",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -29102,7 +29147,7 @@
         },
         {
           key: 2,
-          name: "首页弹窗",
+          name: "全屏广告-首页弹窗",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 1,
@@ -29489,7 +29534,7 @@
         },
         {
           key: 3,
-          name: "右侧悬浮广告",
+          name: "局部广告-右侧悬浮广告",
           quickFind: true,
           matchTime: 10000,
           actionMaximum: 2,
@@ -29530,7 +29575,7 @@
         {
           enable: false,
           key: 4,
-          name: "消息页面-通知开关",
+          name: "通知提示-消息页面-通知开关",
           desc: "点击x按钮，不开启系统通知",
           quickFind: true,
           actionMaximum: 1,
@@ -30702,7 +30747,7 @@
         },
         {
           key: 1,
-          name: "谷歌广告",
+          name: "局部广告-谷歌广告",
           activityIds: "com.mxtech.videoplayer.ad.ActivityMediaList",
           rules: [
             {
@@ -30759,7 +30804,7 @@
         },
         {
           key: 0,
-          name: "米家智惠广告",
+          name: "局部广告-米家智惠广告",
           activityIds: "com.xiaomi.smarthome.SmartHomeMainActivity",
           rules: [
             {
@@ -30774,7 +30819,7 @@
         {
           enable: false,
           key: 1,
-          name: "设备固件升级提示弹窗",
+          name: "更新提示-设备固件升级提示弹窗",
           activityIds: "com.xiaomi.smarthome.framework.plugin.rn.PluginRNActivity",
           snapshotUrls: "https://i.gkd.li/import/12639671",
           rules: [
@@ -31575,7 +31620,7 @@
         },
         {
           key: 0,
-          name: "页面中间跳出广告",
+          name: "全屏广告-页面中间跳出广告",
           activityIds: [
             "com.huawei.openalliance.ad.ppskit.activity.InnerPPSInterstitialAdActivity",
           ],
